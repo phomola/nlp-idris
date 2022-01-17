@@ -1,4 +1,4 @@
--- Unification of features structures (for unification grammars).
+-- Unification of feature structures (for unification grammars).
 
 module Main
 
