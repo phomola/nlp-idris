@@ -63,7 +63,7 @@ mutual
     avm_is_identical_list ((attr1, value1) :: xs) ((attr2, value2) :: ys) =
         if (attr1 == attr2 && equals value1 value2) then avm_is_identical_list xs ys else False
     
-avm_extract_attr : Attribute -> (List (Attribute, Unifiable)) -> Maybe (Unifiable, List (Attribute, Unifiable))
+avm_extract_attr : Attribute -> List (Attribute, Unifiable) -> Maybe (Unifiable, List (Attribute, Unifiable))
 avm_extract_attr _ [] = Nothing
 avm_extract_attr attr1 ((attr2, value1) :: tail) =
     if (attr1 == attr2) then Just (value1, tail)
